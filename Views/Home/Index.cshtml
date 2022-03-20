@@ -1,0 +1,19 @@
+﻿@model  Hotel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 id="home" class="display-4">Booking</h1>
+    <p id="home_p">Find hotel for your soul.</p>
+        <form asp-controller="Booking" asp-action="Index" method="post">
+            <label>Hotel:</label>
+            <input type="text" name="city" asp-route="city" placeholder="city">
+            <input type="date" name="beginDate" asp-route="beginDate" min="">
+            <input type="date" name="endDate" asp-route="endDate">
+            <input type="number" name="seats" asp-route="seats" placeholder="seats">
+            <input type="submit" class="btn btn-primary" value="Search">
+        </form>
+</div>
+
